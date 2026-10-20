@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageButton
 
 class MainActivity2 : AppCompatActivity() {
@@ -25,8 +26,17 @@ class MainActivity2 : AppCompatActivity() {
         }
 
         val ophalen = findViewById<Button>(R.id.button1)
+        val name = findViewById<EditText>(R.id.editTextText)
+        val adres = findViewById<EditText>(R.id.editTextText2)
+        val post = findViewById<EditText>(R.id.editTextText3)
         ophalen.setOnClickListener{
+            val naam = name.text.toString()
+            val adress = adres.text.toString()
+            val postcode = post.text.toString()
             val intent = Intent(this, MainActivity3::class.java)
+            intent.putExtra("naam", naam)
+            intent.putExtra("adress", adress)
+            intent.putExtra("postcode", postcode)
             startActivity(intent)
         }
 
