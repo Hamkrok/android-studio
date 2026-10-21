@@ -11,15 +11,23 @@
         android:id="@+id/imageView3"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        app:srcCompat="@drawable/green_check_mark_icon_with_circle_tick_box_check_list_circle_frame_checkbox_symbol_sign_png"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="85dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.213"
+        app:srcCompat="@drawable/green_check_mark_icon_with_circle_tick_box_check_list_circle_frame_checkbox_symbol_sign_png" />
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="159dp"
+        android:layout_height="69dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="177dp"
-        tools:layout_editor_absoluteY="457dp" />
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.411" />
 </androidx.constraintlayout.widget.ConstraintLayout>

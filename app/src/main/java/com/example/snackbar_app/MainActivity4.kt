@@ -1,6 +1,9 @@
 package com.example.snackbar_app
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -15,6 +18,16 @@ class MainActivity4 : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+        val terug = findViewById<ImageButton>(R.id.imageButton8)
+        terug.setOnClickListener{
+            finish()
+        }
+
+        val betalen = findViewById<Button>(R.id.button4)
+        betalen.setOnClickListener {
+            val intent = Intent(this, MainActivity5::class.java)
+            startActivity(intent)
         }
     }
 }

@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.content.Intent
+import android.widget.ImageButton
 
 class MainActivity3 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,6 +19,11 @@ class MainActivity3 : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val terug = findViewById<ImageButton>(R.id.imageButton9)
+        terug.setOnClickListener{
+            finish()
+        }
+        val name = intent.extras?.getString("naam")
 
         val bestellen = findViewById<Button>(R.id.button3)
         bestellen.setOnClickListener {

@@ -42,6 +42,9 @@ class MainActivity2 : AppCompatActivity() {
 
         val bestel = findViewById<Button>(R.id.button2)
         bestel.setOnClickListener{
+            val naam = name.text.toString()
+            val adress = adres.text.toString()
+            val postcode = post.text.toString()
             val intent = Intent(this, MainActivity3::class.java)
             startActivity(intent)
         }
