@@ -2,6 +2,7 @@ package com.example.snackbar_app
 
 import android.os.Bundle
 import android.widget.ImageButton
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -17,5 +18,10 @@ class MainActivity5 : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val name = intent.extras?.getString("naam")
+        val adress = intent.extras?.getString("adress")
+        val postcode = intent.extras?.getString("postcode")
+        val informatie = findViewById<TextView>(R.id.textView6)
+        informatie.text = "bestelling is geplaatst op naam van $name\n op $adress, $postcode"
     }
 }

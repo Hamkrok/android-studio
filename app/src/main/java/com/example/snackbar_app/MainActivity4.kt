@@ -23,10 +23,16 @@ class MainActivity4 : AppCompatActivity() {
         terug.setOnClickListener{
             finish()
         }
+        val name = intent.extras?.getString("naam")
+        val adress = intent.extras?.getString("adress")
+        val postcode = intent.extras?.getString("postcode")
 
         val betalen = findViewById<Button>(R.id.button4)
         betalen.setOnClickListener {
             val intent = Intent(this, MainActivity5::class.java)
+            intent.putExtra("naam", name)
+            intent.putExtra("adress", adress)
+            intent.putExtra("postcode", postcode)
             startActivity(intent)
         }
     }

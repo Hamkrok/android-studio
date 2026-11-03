@@ -53,7 +53,7 @@
         android:layout_marginTop="52dp"
         android:backgroundTint="#F8B047"
         android:backgroundTintMode="add"
-        android:text="Bestel"
+        android:text="brengen"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"

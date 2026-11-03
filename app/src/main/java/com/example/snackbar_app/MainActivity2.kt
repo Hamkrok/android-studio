@@ -27,8 +27,8 @@ class MainActivity2 : AppCompatActivity() {
 
         val ophalen = findViewById<Button>(R.id.button1)
         val name = findViewById<EditText>(R.id.editTextText)
-        val adres = findViewById<EditText>(R.id.editTextText2)
-        val post = findViewById<EditText>(R.id.editTextText3)
+        val adres = findViewById<EditText>(R.id.editTextText3)
+        val post = findViewById<EditText>(R.id.editTextText2)
         ophalen.setOnClickListener{
             val naam = name.text.toString()
             val adress = adres.text.toString()
@@ -46,6 +46,9 @@ class MainActivity2 : AppCompatActivity() {
             val adress = adres.text.toString()
             val postcode = post.text.toString()
             val intent = Intent(this, MainActivity3::class.java)
+            intent.putExtra("naam", naam)
+            intent.putExtra("adress", adress)
+            intent.putExtra("postcode", postcode)
             startActivity(intent)
         }
     }
