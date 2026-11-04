@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -23,6 +24,14 @@ class MainActivity4 : AppCompatActivity() {
         terug.setOnClickListener{
             finish()
         }
+        val bestelling = findViewById<TextView>(R.id.textView12)
+        val mayo = intent.extras?.getInt("mayo")
+        val oorlog = intent.extras?.getInt("oorlog")
+        val kroket = intent.extras?.getInt("kroket")
+        val frikandel = intent.extras?.getInt("frikandel")
+        val kaas = intent.extras?.getInt("kaas")
+        val pikanto = intent.extras?.getInt("pikanto")
+
         val name = intent.extras?.getString("naam")
         val adress = intent.extras?.getString("adress")
         val postcode = intent.extras?.getString("postcode")

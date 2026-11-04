@@ -26,7 +26,7 @@
         android:layout_marginTop="160dp"
         android:backgroundTint="#F8B047"
         android:backgroundTintMode="add"
-        android:text="ophalen"
+        android:text="betalen"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
