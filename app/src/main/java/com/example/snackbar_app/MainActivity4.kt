@@ -24,13 +24,48 @@ class MainActivity4 : AppCompatActivity() {
         terug.setOnClickListener{
             finish()
         }
+
         val bestelling = findViewById<TextView>(R.id.textView12)
-        val mayo = intent.extras?.getInt("mayo")
-        val oorlog = intent.extras?.getInt("oorlog")
-        val kroket = intent.extras?.getInt("kroket")
-        val frikandel = intent.extras?.getInt("frikandel")
-        val kaas = intent.extras?.getInt("kaas")
-        val pikanto = intent.extras?.getInt("pikanto")
+        var mayo = 0;
+        var oorlog = 0;
+        var kroket = 0;
+        var frikandel = 0;
+        var kaas = 0;
+        var pikanto = 0;
+
+        val intent = getIntent()
+        val extras = intent.extras
+        if (extras != null) {
+            if (extras.containsKey("mayo")) {
+                mayo = intent.extras!!.getInt("mayo")
+            }
+        }
+        if (extras != null) {
+            if (extras.containsKey("oorlog")) {
+                oorlog = intent.extras!!.getInt("oorlog")
+            }
+        }
+        if (extras != null) {
+            if (extras.containsKey("kroket")) {
+                kroket = intent.extras!!.getInt("kroket")
+            }
+        }
+        if (extras != null) {
+            if (extras.containsKey("frikandel")) {
+                frikandel = intent.extras!!.getInt("frikandel")
+            }
+        }
+        if (extras != null) {
+            if (extras.containsKey("kaas")) {
+                kaas = intent.extras!!.getInt("kaas")
+            }
+        }
+        if (extras != null) {
+            if (extras.containsKey("pikanto")) {
+                pikanto = intent.extras!!.getInt("pikanto")
+            }
+        }
+        bestelling.text = " $mayo patat mayo\n $oorlog patat oorlog\n $kroket kroket\n $kaas kaassoufle\n $pikanto pikanto"
 
         val name = intent.extras?.getString("naam")
         val adress = intent.extras?.getString("adress")

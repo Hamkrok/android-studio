@@ -38,7 +38,6 @@ class MainActivity3 : AppCompatActivity() {
         var kaas_count = 0
         var pikanto_count = 0
 
-
         mayo.setOnClickListener{
             mayo_count++
         }
@@ -66,12 +65,31 @@ class MainActivity3 : AppCompatActivity() {
         val bestellen = findViewById<Button>(R.id.button3)
         bestellen.setOnClickListener {
             val intent = Intent(this, MainActivity4::class.java)
-            intent.putExtra("mayo", mayo_count)
-            intent.putExtra("oorlog", oorlog_count)
-            intent.putExtra("kroket", kroket_count)
-            intent.putExtra("frikandel", frikandel_count)
-            intent.putExtra("kaas", kaas_count)
-            intent.putExtra("pikanto", pikanto_count)
+            if(mayo_count == 0){
+            }else{
+                intent.putExtra("mayo", mayo_count)
+            }
+            if(oorlog_count == 0){
+            }else{
+                intent.putExtra("oorlog", oorlog_count)
+            }
+            if(kroket_count == 0){
+            }else{
+                intent.putExtra("kroket", kroket_count)
+            }
+            if(frikandel_count == 0){
+            }else{
+                intent.putExtra("frikandel", frikandel_count)
+            }
+            if(kaas_count == 0){
+            }else{
+                intent.putExtra("kaas", kaas_count)
+            }
+            if(pikanto_count == 0){
+            }else{
+                intent.putExtra("pikanto", pikanto_count)
+            }
+
             intent.putExtra("naam", name)
             intent.putExtra("adress", adress)
             intent.putExtra("postcode", postcode)
