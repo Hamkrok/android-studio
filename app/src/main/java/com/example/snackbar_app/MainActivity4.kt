@@ -65,7 +65,7 @@ class MainActivity4 : AppCompatActivity() {
                 pikanto = intent.extras!!.getInt("pikanto")
             }
         }
-        bestelling.text = " $mayo patat mayo\n $oorlog patat oorlog\n $kroket kroket\n $kaas kaassoufle\n $pikanto pikanto"
+        bestelling.text = " $mayo x patat mayo\n $oorlog x patat oorlog\n $kroket x kroket\n $kaas x kaassoufle\n $pikanto x pikanto"
 
         val name = intent.extras?.getString("naam")
         val adress = intent.extras?.getString("adress")
